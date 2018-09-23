@@ -26,7 +26,7 @@ public class AlunoTeste {
 			System.out.println("(1) Cadastrar  Aluno");
 			System.out.println("(2) Cadastrar  Curso");
 			System.out.println("(3) Cadastrar Professor");
-			//System.out.println("(4) Cadastrar disciplina");
+			System.out.println("(4) Cadastrar Disciplina");
 			//System.out.println("(3) Deletar contato");
 			//System.out.println("(4) Listar contatos");
 			System.out.println("(0) Sair \n");

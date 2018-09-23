@@ -2,7 +2,6 @@ package services;
 
 import java.util.ArrayList;
 
-import modelos.Curso;
 import modelos.Professor;
 
 
