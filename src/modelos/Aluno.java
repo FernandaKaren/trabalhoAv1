@@ -6,7 +6,7 @@ public class Aluno {
 	private String cpf;
 	private String matricula;
 	// Código do curso + 4 últimos dígitos do cpf + o ano corrente.
-	private String endereço;
+	private String endereco;
 	private String email;
 	private long telefone;
 	private boolean situacao;
@@ -37,11 +37,11 @@ public class Aluno {
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-	public String getEndereço() {
-		return endereço;
+	public String getEndereco() {
+		return endereco;
 	}
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 	public String getEmail() {
 		return email;

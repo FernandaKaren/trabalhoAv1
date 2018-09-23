@@ -40,5 +40,8 @@ public class Curso {
 	public void setGrade(ArrayList<Disciplina> grade) {
 		this.grade = grade;
 	}
+	public void mostraCurso(int indice){
+		System.out.println("("+indice+") Nome: " + this.nomeCurso + "\n");				
+	}
 	
 }

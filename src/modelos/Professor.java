@@ -1,20 +1,20 @@
 package modelos;
 
-import java.util.ArrayList;
 
 public class Professor {
-	
 	private String nomeProfessor;
 	private String cpfProfessor;
 	private String enderecoProfessor;
 	private String emailProfessor;
 	private long telefoneProfessor;
-	private CategoriasEnum categoriasProfessor;
+	//private CategoriasEnum categoriasProfessor;
+	private String categoriasProfessor;	
 	// Especialista
 	// Mestre
 	// Doutor
 	private Disciplina disciplinasProfessor;
 	// Um professor deve estar associado a pelo menos uma disciplina.
+	
 	public String getNomeProfessor() {
 		return nomeProfessor;
 	}
@@ -44,11 +44,11 @@ public class Professor {
 	}
 	public void setTelefoneProfessor(long telefoneProfessor) {
 		this.telefoneProfessor = telefoneProfessor;
-	}
-	public CategoriasEnum getCategoriasProfessor() {
+	}	
+	public String getCategoriasProfessor() {
 		return categoriasProfessor;
 	}
-	public void setCategoriasProfessor(CategoriasEnum categoriasProfessor) {
+	public void setCategoriasProfessor(String categoriasProfessor) {
 		this.categoriasProfessor = categoriasProfessor;
 	}
 	public Disciplina getDisciplinasProfessor() {
@@ -57,7 +57,7 @@ public class Professor {
 	public void setDisciplinasProfessor(Disciplina disciplinasProfessor) {
 		this.disciplinasProfessor = disciplinasProfessor;
 	}
-	
-	
-
+	public void mostraProfessor(int indice){
+		System.out.println("("+indice+") Nome do professor: " + this.nomeProfessor + "\n");				
+	}
 }
