@@ -3,29 +3,29 @@ package modelos;
 import java.util.ArrayList;
 
 public class Disciplina {
-	private String nome;
+	private String nomeDisciplina;
 	private int codigoDisciplina;
-	// 4 dígitos
+	// 4 dï¿½gitos
 	private Professor professor;
 	private String chamada;
 	ArrayList<Aluno> alunosMatriculados = new ArrayList<Aluno>();
 	// lista de alunos matriculados
 	private int sala;
-	//salas são valores entre 100 até 399.
+	//salas sï¿½o valores entre 100 atï¿½ 399.
 	private int cargaHoraria;
 	//2h ou 4h por semana.
 	private double horario;
 	private double custo;
-	// O custo é e a soma de todos os custos em um mês:
-	//Custo com professor, valor da hora aula multiplicado pela carga horária do professor.
+	// O custo ï¿½ e a soma de todos os custos em um mï¿½s:
+	//Custo com professor, valor da hora aula multiplicado pela carga horï¿½ria do professor.
 	// Especialista 25$/h, mestre 35$/h e doutor 45$/h
-	// Custo com infraestrutura, valor de custo de uma sala multiplicado pela carga horária da disciplina.
-	// Custo de de uma sala é de 30$/h.
-	public String getNome() {
-		return nome;
+	// Custo com infraestrutura, valor de custo de uma sala multiplicado pela carga horï¿½ria da disciplina.
+	// Custo de de uma sala ï¿½ de 30$/h.
+	public String getNomeDisciplina() {
+		return nomeDisciplina;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeDisciplina(String nomeDisciplina) {
+		this.nomeDisciplina = nomeDisciplina;
 	}
 	public int getCodigoDisciplina() {
 		return codigoDisciplina;
@@ -74,5 +74,8 @@ public class Disciplina {
 	}
 	public void setCusto(double custo) {
 		this.custo = custo;
+	}
+	public void mostraDisciplina(int indice){
+		System.out.println("("+indice+") Nome: " + this.nomeDisciplina + "\n");				
 	}
 }

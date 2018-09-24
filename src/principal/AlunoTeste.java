@@ -3,9 +3,11 @@ package principal;
 import java.util.Scanner;
 
 import modelos.Curso;
+import modelos.Disciplina;
 import modelos.Professor;
 import services.AlunoService;
 import services.CursoService;
+import services.DisciplinaService;
 import services.ProfessorService;
 
 public class AlunoTeste {
@@ -22,7 +24,7 @@ public class AlunoTeste {
 		int ops = -1;
 		while(ops != 0){
 			
-			System.out.println("Escolha uma opção: \n ");
+			System.out.println("Escolha uma opï¿½ï¿½o: \n ");
 			System.out.println("(1) Cadastrar  Aluno");
 			System.out.println("(2) Cadastrar  Curso");
 			System.out.println("(3) Cadastrar Professor");
@@ -42,7 +44,7 @@ public class AlunoTeste {
 				String nome = teclado.next();
 				System.out.print("Digite o cpf do aluno \n");
 				String cpf = teclado.next();				
-				System.out.print("Digite o endereço do aluno \n");
+				System.out.print("Digite o endereï¿½o do aluno \n");
 				String endereco = teclado.next();
 				System.out.print("Digite o telefone do aluno \n");
 				long telefone = teclado.nextLong();				
@@ -58,7 +60,7 @@ public class AlunoTeste {
 				}
 				System.out.print("Digite o nome do curso \n");
 				String nomeCurso = teclado.next();
-				System.out.print("Digite o código do curso \n");
+				System.out.print("Digite o cï¿½digo do curso \n");
 				int codigoCurso = teclado.nextInt();				
 				System.out.print("Digite o turno do curso \n");
 				String turnoCurso = teclado.next();								
@@ -75,7 +77,7 @@ public class AlunoTeste {
 				String cpfProfessor = teclado.next();				
 				System.out.print("Digite o email do professor:");
 				String emailProfessor = teclado.next();
-				System.out.print("Digite o endereço do professor: ");
+				System.out.print("Digite o endereï¿½o do professor: ");
 				String enderecoProfessor = teclado.next();
 				System.out.print("Digite o telefone do professor: ");
 				long telefoneProfessor = teclado.nextLong();
@@ -84,6 +86,24 @@ public class AlunoTeste {
 				int opcaoCategoriaProfessor = teclado.nextInt();
 				String especialidade = professorService.especialidadeProfessor(opcaoCategoriaProfessor);
 				professorService.addProfessor(nomeProfessor, cpfProfessor, emailProfessor, enderecoProfessor, telefoneProfessor, especialidade);
+				break;
+			case 4:				
+				System.out.println("Digite o nome da Disciplina: ");
+				String nomeDisciplina = teclado.next();
+				//Professor professor, double custo)
+				System.out.print("Digite o codigo da Disciplina: ");
+				int codigoDisciplina = teclado.nextInt();				
+				System.out.print("Digite o horario da disciplina:");
+				double horario = teclado.nextDouble();
+				System.out.print("Digite a carga horaria da disciplina: ");
+				int cargaHoraria = teclado.nextInt();
+				System.out.print("Digite a sala da disciplina: ");
+				int sala = teclado.nextInt();
+				System.out.print("Escolha o professor da disciplina \n");
+				professorService.listarProfessores();
+				int opcaoProfessorDisciplina = teclado.nextInt();
+				Professor professorSelect = professorService.professorDisciplina(opcaoProfessorDisciplina);
+			//	professorService.addProfessor(nomeProfessor, cpfProfessor, emailProfessor, enderecoProfessor, telefoneProfessor, especialidade);
 				break;
 
 			default:
@@ -94,5 +114,6 @@ public class AlunoTeste {
 		teclado.close();
 
 	}
+	
 
 }
