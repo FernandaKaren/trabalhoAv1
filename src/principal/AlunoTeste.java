@@ -18,6 +18,7 @@ public class AlunoTeste {
 		AlunoService alunoService = new AlunoService();
 		CursoService cursoService = new CursoService();
 		ProfessorService professorService = new ProfessorService();
+		DisciplinaService disciplinaService = new DisciplinaService();
 		
 		System.out.println("**Menu***");
 		
@@ -87,7 +88,10 @@ public class AlunoTeste {
 				String especialidade = professorService.especialidadeProfessor(opcaoCategoriaProfessor);
 				professorService.addProfessor(nomeProfessor, cpfProfessor, emailProfessor, enderecoProfessor, telefoneProfessor, especialidade);
 				break;
-			case 4:				
+			case 4:
+				if(!professorService.verificaExistenciaProfessor()) {
+					break;
+				}
 				System.out.println("Digite o nome da Disciplina: ");
 				String nomeDisciplina = teclado.next();
 				//Professor professor, double custo)
@@ -103,7 +107,7 @@ public class AlunoTeste {
 				professorService.listarProfessores();
 				int opcaoProfessorDisciplina = teclado.nextInt();
 				Professor professorSelect = professorService.professorDisciplina(opcaoProfessorDisciplina);
-			//	professorService.addProfessor(nomeProfessor, cpfProfessor, emailProfessor, enderecoProfessor, telefoneProfessor, especialidade);
+				disciplinaService.addDisciplina(nomeDisciplina, codigoDisciplina, horario, cargaHoraria, sala, professorSelect);
 				break;
 
 			default:

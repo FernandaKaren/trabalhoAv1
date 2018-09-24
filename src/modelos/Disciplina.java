@@ -6,7 +6,7 @@ public class Disciplina {
 	private String nomeDisciplina;
 	private int codigoDisciplina;
 	// 4 d�gitos
-	private Professor professor;
+	private Professor professorDisciplina;
 	private String chamada;
 	ArrayList<Aluno> alunosMatriculados = new ArrayList<Aluno>();
 	// lista de alunos matriculados
@@ -33,11 +33,11 @@ public class Disciplina {
 	public void setCodigoDisciplina(int codigoDisciplina) {
 		this.codigoDisciplina = codigoDisciplina;
 	}
-	public Professor getProfessor() {
-		return professor;
+	public Professor getProfessorDisciplina() {
+		return professorDisciplina;
 	}
-	public void setProfessor(Professor professor) {
-		this.professor = professor;
+	public void setProfessorDisciplina(Professor professorDisciplina) {
+		this.professorDisciplina = professorDisciplina;
 	}
 	public String getChamada() {
 		return chamada;

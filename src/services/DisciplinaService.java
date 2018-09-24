@@ -25,11 +25,7 @@ public class DisciplinaService {
 		}		
 		return true;
 	}
-	//public String ProfessorDisc(int indice)
-	//{
-	//	indice = indice - 1;
-	//	return listaProfessor.get(indice);
-	//}
+
 	
 	public void listarDisciplina()
 	{
@@ -44,18 +40,18 @@ public class DisciplinaService {
 			indice++;
 		}
 	}
-	public void addDisciplina(String nomeDisciplina,int codigoDisciplina, double horario, int cargaHoraria, int sala,Professor professor)
+	public void addDisciplina(String nomeDisciplina,int codigoDisciplina, double horario, int cargaHoraria, int sala,Professor professorDisciplina)
 	{
 		Disciplina disciplina = new Disciplina();
 		disciplina.setNomeDisciplina(nomeDisciplina);
 		disciplina.setCodigoDisciplina(codigoDisciplina);
 		disciplina.setSala(sala);
 		disciplina.setCargaHoraria(cargaHoraria);
-		disciplina.setProfessor(professor);
+		disciplina.setProfessorDisciplina(professorDisciplina);
 	//	disciplina.setCusto(custo);
 		disciplina.setHorario(horario);
 		listaDisciplina.add(disciplina);
-		System.out.print("Curso cadastrado com sucesso!");
+		System.out.print("Disicplina cadastrado com sucesso!");
 	}
 	
 	 

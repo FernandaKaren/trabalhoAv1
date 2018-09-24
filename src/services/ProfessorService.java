@@ -23,6 +23,11 @@ public class ProfessorService {
 		indice = indice - 1;
 		return listaProfessor.get(indice);
 	}
+	/*public Professor professorDisciplina(int indice)
+	{
+		indice = indice - 1;
+		return listaProfessor.get(indice);
+	}*/
 	
 	public boolean verificaExistenciaProfessor()
 	{
@@ -75,4 +80,9 @@ public class ProfessorService {
 		listaProfessor.add(professor);
 		System.out.print("Professor cadastrado com sucesso!");
 	}
+
+	public Professor professorDisciplina(int opcaoProfessorDisciplina) {
+		opcaoProfessorDisciplina = opcaoProfessorDisciplina - 1;
+		return listaProfessor.get(opcaoProfessorDisciplina);
+			}
 }
