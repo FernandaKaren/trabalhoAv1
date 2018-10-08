@@ -51,7 +51,7 @@ public class DisciplinaService {
 	//	disciplina.setCusto(custo);
 		disciplina.setHorario(horario);
 		listaDisciplina.add(disciplina);
-		System.out.print("Disicplina cadastrado com sucesso!");
+		System.out.print("Disciplina cadastrado com sucesso!");
 	}
 	
 	 
